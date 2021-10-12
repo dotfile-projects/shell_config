@@ -20,9 +20,9 @@ auto install
 
 ```shell
 # wget
-wget -O - https://github.com/dotfile-projects/shell_config/auto_install.sh | sh
+wget -O - https://raw.githubusercontent.com/dotfile-projects/shell_config/main/run.sh | sh
 # curl
-curl -o - https://github.com/dotfile-projects/shell_config/auto_install.sh | sh
+curl -o - https://raw.githubusercontent.com/dotfile-projects/shell_config/main/run.sh | sh
 ```
 
 manual install
