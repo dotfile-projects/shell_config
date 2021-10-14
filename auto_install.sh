@@ -2,7 +2,7 @@
 
 configPath=~/.shell_config
 
-git clone https://github.com/dotfile-projects/vim.git $configPath
+git clone https://github.com/dotfile-projects/shell_config.git $configPath
 
 sh $configPath/run.sh
 
