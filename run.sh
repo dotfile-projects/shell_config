@@ -31,4 +31,4 @@ install_script() {
 install_script .tmux.conf
 
 install_script .zshrc
-
+source ~/.zshrc
