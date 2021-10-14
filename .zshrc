@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -15,7 +15,17 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo colored-man-pages command-not-found z zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(
+    git
+    sudo
+    colored-man-pages
+    command-not-found
+    z
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    vi-mode
+)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -25,22 +35,17 @@ alias lf=ranger
 # jesseduffield/lazygit
 alias lg=lazygit
 
-# JDK
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home
-export CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
-export PATH=$JAVA_HOME/bin:$PATH:.
-
-# gradle
-export GRADLE_HOME=/usr/local/share/gradle/gradle-7.0.2
-export PATH=$PATH:$GRADLE_HOME/bin
-
-# maven
-export MVN="/usr/local/share/maven"
-export PATH="$MVN/bin:$PATH"
+# vi-mode config
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+VI_MODE_SET_CURSOR=true
+MODE_INDICATOR="%F{yellow}+%f"
 
 # zsh-autosuggestions
 export TERM=xterm-256color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+
+# can add local config in this file
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # install fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
