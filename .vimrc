@@ -16,6 +16,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'kana/vim-textobj-user'
 Plug 'majutsushi/tagbar'
 Plug 'tmux-plugins/vim-tmux' " 支持 tmux 的配置文件语法高亮
+Plug 'yianwillis/vimcdoc' " vim中文文档
 call plug#end()
 
 " 设置easymotion的leader键为<,>
