@@ -18,10 +18,15 @@ Those config work must require those sofeware installed.
 
 auto install
 
+wget
+
 ```shell
-# wget
 wget -O - https://raw.githubusercontent.com/dotfile-projects/shell_config/main/auto_install.sh | sh
-# curl
+```
+
+curl
+
+```shell
 curl -o - https://raw.githubusercontent.com/dotfile-projects/shell_config/main/auto_install.sh | sh
 ```
 
