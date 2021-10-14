@@ -34,7 +34,7 @@ manual install
 
 ```shell
 # download from github
-git clone https://github.com/dotfile-projects/shell_config ~/.shell_config
+git clone https://github.com/dotfile-projects/shell_config --depth=1 ~/.shell_config
 # run the shell script
 sh ~/.shell_config/.run.sh
 ```
