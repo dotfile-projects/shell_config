@@ -24,10 +24,13 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     vi-mode
+    zsh-completions
 )
 
 
 source $ZSH/oh-my-zsh.sh
+
+autoload -U compinit && compinit
 
 # ranger/ranger
 alias lf=ranger

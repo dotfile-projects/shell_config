@@ -43,9 +43,19 @@ sh ~/.shell_config/.run.sh
 
 ### tmux
 
-see [tmux](https://github.com/tmux/tmux)
+See [tmux](https://github.com/tmux/tmux)
 
-#### config
+After install tmux config files, reload config file by tmux: `tmux source-file ~/.tmux.conf`
 
-#### plugins
+### vim
+
+After install vim config files, install vim plugins by plug, press `vim` open vim window and press `:` go to command mode, then press `PlugInstall` to install other plugins. If the network not well, try install more then once.
+
+### ohmyzsh
+
+You should change bash to `zsh` and install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) first.
+
+After install config files, `source ~/.zshrc` to enable zsh environment. If some plugins not found, install them manual.
+
+For example: [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) plugin is need to install, reference it's [install](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) document.
 
