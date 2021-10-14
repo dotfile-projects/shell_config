@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jellychen/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -42,10 +42,5 @@ export PATH="$MVN/bin:$PATH"
 export TERM=xterm-256color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
-#export http_proxy="http://127.0.0.1:15732"
-#export HTTP_PROXY="http://127.0.0.1:15732"
-#export https_proxy="http://127.0.0.1:15732"
-#export HTTPS_PROXY="http://127.0.0.1:15732"
-
-
+# install fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
