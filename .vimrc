@@ -17,6 +17,8 @@ Plug 'kana/vim-textobj-user'
 Plug 'majutsushi/tagbar'
 Plug 'tmux-plugins/vim-tmux' " 支持 tmux 的配置文件语法高亮
 Plug 'yianwillis/vimcdoc' " vim中文文档
+Plug 'bling/vim-airline' " airline
+Plug 'vim-airline/vim-airline-themes' " airline theme
 call plug#end()
 
 " 设置easymotion的leader键为<,>
@@ -63,7 +65,6 @@ set ruler
 set showmode
 " 设置内部编码为utf8
 set encoding=utf8
-colorscheme elflord
 set scrolloff=3
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
@@ -71,6 +72,8 @@ set scrolloff=3
 set nocompatible
 " 在 Vim 窗口右下角，标尺的右边显示未完成的命令
 set showcmd
+
+colorscheme elflord
 
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
