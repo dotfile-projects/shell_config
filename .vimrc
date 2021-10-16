@@ -88,7 +88,7 @@ set relativenumber " 显示为相对行号
 " 设置下方状态栏
 set showmode " 命令行显示vim当前模式
 set showcmd " 显示输入的命令
-set scrolloff=3 " 使光标始终和上下边缘相距3行
+set scrolloff=5 " 使光标始终和上下边缘相距5行
 set nocompatible " 使用vim的键盘模式
 set laststatus=2 " 总显示最后一个窗口的状态行；设为1则窗口数多于一个的时候显示最后一个窗口的状态行；0不显示最后一个窗口的状态行
 
