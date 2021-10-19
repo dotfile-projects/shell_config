@@ -74,6 +74,7 @@ set clipboard=unnamed
 set encoding=utf-8 " Vim内部使用的字符编码方式设置为UTF-8
 set fileencoding=utf-8 " Vim中当前编辑的文件的字符编码方式
 set fileencodings=utf-8,ucs-bom,gbk,default,latin1 " Vim编辑文件编码探测顺序
+set fileformat=unix " 设置文件编码为unix
 set langmenu=zn_CN.UTF-8 " 菜单栏语言
 set helplang=cn " 帮助文档语言,需要中文文档插件
 " 设置高亮
@@ -83,6 +84,7 @@ set hlsearch " 高亮搜索内容
 set incsearch " 逐字符搜搜
 " set nowrapscan " 查找到文件结尾时截止
 set ruler " 右下角显示光标位置
+set ignorecase " 搜索模式忽略大小写
 " 显示行号
 set number
 set relativenumber " 显示为相对行号
@@ -91,7 +93,7 @@ set showmode " 命令行显示vim当前模式
 set showcmd " 显示未完成(正在输入)的命令
 set scrolloff=5 " 使光标始终和上下边缘相距5行
 set nocompatible " 使用vim的改进模式, 不完全兼容vi模式
-set laststatus=2 " 总显示最后一个窗口的状态行；设为1则窗口数多于一个的时候显示最后一个窗口的状态行；0不显示最后一个窗口的状态行
+set laststatus=2 " 指定什么时候对最后一个窗口显示状态条:0-永远不,1-只有使用分割窗口的时候(默认),2-永远有
 
 set confirm " 在处理未保存或只读文件的时候，弹出确认
 set nobackup " 不需要备份
