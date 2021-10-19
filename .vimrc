@@ -56,7 +56,7 @@ set history=200 " 保存命令历史为200行
 set modelines=0 " 禁止查找模式行
 set mouse=a " 使用鼠标
 set t_Co=256 " 设置256色
-filetype plugin indent on " 分为三部分命令：file on, file plugin on, file indent on.分别表示自动识别文件类型，用文件类型脚本，使用缩进定义文件。
+filetype plugin indent on " 分为三部分命令：文件类型探测，使用文件类型相关的插件，使用缩进文件。
 " 缩进
 set expandtab " 将制表符扩展为空格
 set tabstop=4 " 编辑时制表符占用空格数
@@ -66,7 +66,7 @@ set smartindent " 智能对齐
 set autoindent " 保持上一行的缩进
 set cindent " 使用C语言的缩进
 " 设置命令模式的tab键展开内容
-set wildmenu " 增强模式中的命令行自动完成操作
+set wildmenu " 在状态行上显示补全匹配
 set wildmode=list:longest,full
 " 将vim的寄存器和系统剪贴板数据保持一致
 set clipboard=unnamed
@@ -78,18 +78,19 @@ set langmenu=zn_CN.UTF-8 " 菜单栏语言
 set helplang=cn " 帮助文档语言,需要中文文档插件
 " 设置高亮
 set cursorline " 高亮光标所在行
-syntax on " 语法高亮
-set hlsearch " 高亮搜索
-set incsearch " 搜索逐字符高亮
-set ruler " 右下角显示标尺
+syntax on " 打开文件的色彩高亮
+set hlsearch " 高亮搜索内容
+set incsearch " 逐字符搜搜
+" set nowrapscan " 查找到文件结尾时截止
+set ruler " 右下角显示光标位置
 " 显示行号
 set number
 set relativenumber " 显示为相对行号
 " 设置下方状态栏
 set showmode " 命令行显示vim当前模式
-set showcmd " 显示输入的命令
+set showcmd " 显示未完成(正在输入)的命令
 set scrolloff=5 " 使光标始终和上下边缘相距5行
-set nocompatible " 使用vim的键盘模式
+set nocompatible " 使用vim的改进模式, 不完全兼容vi模式
 set laststatus=2 " 总显示最后一个窗口的状态行；设为1则窗口数多于一个的时候显示最后一个窗口的状态行；0不显示最后一个窗口的状态行
 
 set confirm " 在处理未保存或只读文件的时候，弹出确认
@@ -97,8 +98,10 @@ set nobackup " 不需要备份
 set noswapfile " 不要swp文件
 
 set backspace=indent,eol,start
-set list  " show space chars
-set listchars=tab:>-,trail:~ " 行尾有多余空格显示为~
+set whichwrap=b,s,<,>,[,] " 在普通模式和编辑模式中左右键可移动到上一行和下一行
+set list " 显示行尾空白字符
+set listchars=tab:>-,trail:~ " 行尾有多余<TAB>显示为-,空格显示为~
+set cmdheight=1 " 底部消息空间设置为2行
 
 "被分割窗口之间显示空白
 set fillchars=vert:/
@@ -111,6 +114,6 @@ let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 " 按键映射
-inoremap jj <esc> " 映射ESC键位jj
+inoremap jj <esc>
 nnoremap H ^
 nnoremap L $
