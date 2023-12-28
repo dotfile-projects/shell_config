@@ -23,7 +23,10 @@ Plug 'tmux-plugins/vim-tmux' " 支持 tmux 的配置文件语法高亮
 Plug 'yianwillis/vimcdoc' " vim中文文档
 Plug 'bling/vim-airline' " airline
 Plug 'vim-airline/vim-airline-themes' " airline theme
+Plug 'godlygeek/tabular' " Markdown依赖插件
+Plug 'plasticboy/vim-markdown' " Markdown插件
 " Plug 'itchyny/lightline.vim' " status bar
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fzf 文件及内容查找工具
 call plug#end()
 
 set background=dark
@@ -42,13 +45,25 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 "   \ 'link': 'some_bad_symbolic_links',
 "   \ }
 
-
 " 设置easymotion的leader键为<,>
 let g:EasyMotion_leader_key=','
 
 " 配置nerdtree的打开快捷键为<F2>
 nnoremap <f2> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " 默认显示隐藏文件
+
+" 配置markdown参数
+" 快捷键: :Toc 打开目录, :InsertToc 插入目录, :TableFormat 格式化表格, :SetexToAtx 下划线标题转为#标题
+"         :HeaderDecrease 减少级别, :HeaderIncrease 增加级别。
+let g:vim_markdown_toc_autofit = 1 " 启用TOC
+let g:vim_markdown_folding_level = 6 " 默认折叠级别设置为6
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_follow_anchor = 1
+let g:vim_markdown_anchorexpr = "'<<'.v:anchor.'>>'"
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_autowrite = 1
 
 
 " 设置vim本体参数
